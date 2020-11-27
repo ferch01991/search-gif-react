@@ -3,6 +3,8 @@ import { useFetchGifs } from './hooks/useFetchGifs'
 import { GifGridItem } from './GifGridItem'
 // import { getGifs } from './helpers/getGifs'
 
+import PropTypes from "prop-types";
+
 export const GifGrid = ({ category }) => {
     
     // data: images => es el nombre que se le quiere dar
@@ -42,4 +44,8 @@ export const GifGrid = ({ category }) => {
         </>
 
     )
+}
+
+GifGrid.prototype = {
+    setCategories: PropTypes.func.isRequired
 }

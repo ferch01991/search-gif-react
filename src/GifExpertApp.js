@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { AddCategory } from "./AddCategory";
 import { GifGrid } from './GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultcatgories=[]}) => {
 
-    const [categories, setCategories] = useState(['Dragon Ball'])
+    const [categories, setCategories] = useState(defaultcatgories)
 
     const handlerAdd = (e) => {
         // Spread extrae todos los elementos
